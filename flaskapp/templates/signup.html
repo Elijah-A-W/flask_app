@@ -1,7 +1,16 @@
 {% extends "layout.html"%}
 {% block content%}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+            {% for message in messages %}
+                    {{ message }}
+            {% endfor %}
+    {% endif %}
+{% endwith %}
+
     <center>
-       <form action="" method="POST">
+       <form action="/signup" method="POST">
         <div class="form">
             <h3>Create An Account</h3>
             <p>{{form.name.label}}</p>
