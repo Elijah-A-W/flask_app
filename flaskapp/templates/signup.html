@@ -1,0 +1,21 @@
+{% extends "layout.html"%}
+{% block content%}
+    <center>
+       <form action="" method="POST">
+        <div class="form">
+            <h3>Create An Account</h3>
+            <p>{{form.name.label}}</p>
+            <p>{{form.name}}</p>
+            <p>{{form.email.label}}</p>
+            <p>{{form.email}}</p>
+            <p>{{form.password.label}}</p>
+            <p>{{form.password}}</p>
+            <p>{{form.confirm.label}}</p>
+            <p>{{form.confirm}}</p>
+            <p>{{form.submit.label}}</p>
+            <p>{{form.submit}}</p>
+        </div>
+       </form>
+    </center>
+
+{% endblock %}
